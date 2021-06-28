@@ -13,10 +13,12 @@ const forecast=(lati,long,callback)=>{
                  
                 rain:weatherData.clouds.all,
                 temp:weatherData.main.temp,
-                 des:weatherData.weather[0].description
+                 des:weatherData.weather[0].description,
+                 tempMax:weatherData.main.temp_max,
+                 tempMin:weatherData.main.temp_min
             }
             
-            callback(undefined,data.des + ' It is currently '+ data.temp + ' degree out. There is a '+data.rain+'% chance of rain')
+            callback(undefined,data.des + ' It is currently '+ data.temp + ' degree out. There is a '+data.rain+'% chance of rain. Its max '+data.tempMax+' degree out and min '+data.tempMin+' degree.')
         }
     })
 }
