@@ -1,18 +1,3 @@
-
-//c 28
-fetch('http://localhost:3000/weather?address=!').then((response)=>{
-    response.json().then((error,{location,forecast}={})=>{
-        if(error)
-        {
-            console.log(error);
-           return;
-        }
-        console.log(forecast);
-        console.log(location);
-    })
-})
-
-
 const weatherForm= document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne= document.querySelector('#message-1')
